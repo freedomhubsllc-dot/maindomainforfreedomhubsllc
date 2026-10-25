@@ -1,2 +1,11 @@
-# maindomainforfreedomhubsllc
-Single-page responsive web layout for www.freedomhubsllc.com. Built for hosting on GitHub Pages with smooth-scroll navigation, custom domain setup, and structured sections showcasing our core portfolio: legacy media preservation and AI-driven platforms.
+# Freedom Hubs LLC — Website
+
+Official repository for the corporate single-page website hosted at [www.freedomhubsllc.com](https://www.freedomhubsllc.com).
+
+## About
+Freedom Hubs LLC is a multi-brand development firm dedicated to capturing, protecting, and modernizing digital legacies — bridging 30-year-old analog media conversions (VHS) with modern AI mobile applications.
+
+## Contact
+- **Phone:** (xxx) xxx - xxxx
+- **Email:** xxxxxx@freedomhubsllc.com
+- **Location:** The Woodlands, TX, United States
