@@ -1,49 +1,351 @@
-Act as an expert front-end web developer and UI/UX designer. Build a complete, responsive, modern, single-page website HTML/CSS/JS file designed to be hosted directly on GitHub Pages for the domain "www.freedomhubsllc.com".
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Freedom Hubs LLC | Innovating for Generations</title>
+  <style>
+    /* Global Styles & Variables */
+    :root {
+      --bg-dark: #0f172a;
+      --bg-light: #f8fafc;
+      --card-bg: #ffffff;
+      --text-dark: #1e293b;
+      --text-muted: #64748b;
+      --accent: #b45309; /* Warm Amber */
+      --accent-hover: #92400e;
+      --navy: #1e3a8a;
+      --border: #e2e8f0;
+      --font-serif: Georgia, Cambria, "Times New Roman", Times, serif;
+      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
 
-### Design & Theme Specifications:
-- **Style:** Clean, professional, corporate, and trustworthy with a slight tech-forward accent. Warm tones paired with deep slate/navy to reflect the theme "From VHS to AI".
-- **Navigation:** Header sticky navigation bar with smooth scrolling to sections: [Home, Our Vision, Ventures, Governance, Contact].
-- **Layout:** Mobile-first, fully responsive design using clean CSS grid/flexbox and CSS variables.
-- **Typography:** Modern serif for main headings, clean sans-serif for body text.
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-### Content & Script Requirements:
+    html {
+      scroll-behavior: smooth;
+    }
 
-1. HERO SECTION (#home)
-   - Headline (Large): Innovating for Generations. Preserving What Matters.
-   - Sub-headline: Freedom Hubs LLC is a premier multi-brand development firm dedicated to creating technologies and services that capture, protect, and modernize your legacy—bridging 30-year-old analog media like VHS tape conversions with cutting-edge AI apps.
-   - Primary Call-to-Action Button: "Learn About Our Brands" (scrolls smoothly to #ventures).
+    body {
+      font-family: var(--font-sans);
+      color: var(--text-dark);
+      background-color: var(--bg-light);
+      line-height: 1.6;
+    }
 
-2. CORE MISSION (#vision)
-   - Headline: The Freedom Hubs Vision
-   - Body Paragraph 1: At Freedom Hubs LLC, we recognize that in a rapidly shifting world, the most valuable assets are the stories we tell, the connections we build, and the legacies we preserve.
-   - Body Paragraph 2: Our mission is to build, acquire, and grow a diverse portfolio of specialized brands that serve as essential bridges. Whether through precise digital media translation—converting physical 30-year-old VHS archives—or building modern AI-driven mobile applications, our ventures are unified by a single commitment: leveraging innovative technology to empower individuals and families to secure and access their history for a digital future.
-   - Body Paragraph 3: We focus on delivering technological solutions that offer security, seamless access, and perpetual relevance.
+    /* Header & Navigation */
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(8px);
+      color: #fff;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
 
-3. OUR VENTURES (#ventures)
-   - Headline: A Portfolio of Focused Solutions
-   - Subtext: We operate on a simple principle: specialize to excel. Instead of offering generalized solutions, Freedom Hubs LLC develops unique, purpose-driven brands under its umbrella. Each DBA is incubated with a specific mandate and operates independently to ensure deep domain expertise and maximum quality.
-   - Two-Column / Card Grid Layout:
-     * Card 1: Digital Connectivity & AI Mobile Applications
-       - Description: Focused on creating innovative mobile platforms and AI-driven apps that enhance daily life, streamline personal management, and strengthen personal connections.
-     * Card 2: Legacy Media Preservation & Archiving
-       - Description: Dedicated to converting 30-year-old analog history—including VHS tapes and legacy physical media—into a vibrant, accessible digital future for generations to access.
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.5rem;
+    }
 
-4. CORPORATE GOVERNANCE (#governance)
-   - Headline: Corporate Governance
-   - Body Paragraph 1: Freedom Hubs LLC is professionally managed and strategically led to maximize cross-brand synergy and long-term stability. While our brands are distinct in their execution, they operate under a unified framework of shared corporate values: Integrity, Security, and Innovation.
-   - Body Paragraph 2: This management model allows us to maintain a nimble operational approach within our specialized niches, while the parent LLC provides a robust legal and financial infrastructure, ensuring accountability and consistent standards across our entire portfolio.
+    .logo {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      color: #fff;
+      text-decoration: none;
+    }
 
-5. PARENT BRAND PROMISE
-   - Headline: A Foundation for Your Digital Legacy
-   - Body Text: We understand that you don't just invest in technology—you invest in the certainty that your data and memories will endure. Freedom Hubs LLC is that foundation. We build with the precision of a technician and the heart of a historian, ensuring every project under our name is worthy of your trust.
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+    }
 
-6. FOOTER & CONTACT (#contact)
-   - Corporate Info Header: FREEDOM HUBS LLC
-   - Business Phone: (xxx) xxx - xxxx
-   - General Email: xxxxxx@freedomhubsllc.com
-   - Location: The Woodlands, TX, United States
-   - Copyright Line: © 2026 Freedom Hubs LLC. All Rights Reserved. Doing Business As (DBA) multiple specialized ventures.
+    nav a {
+      color: #cbd5e1;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.2s ease;
+    }
 
-### Additional Features Needed:
-- Include a lightweight `index.html` structure with embedded `<style>` and `<script>` or CSS/JS modularity ready to drop into a GitHub repository.
-- Include a simple CNAME guide note at the bottom of the HTML file as a comment on how to set up the GitHub Pages custom domain for `www.freedomhubsllc.com`.
+    nav a:hover {
+      color: #fff;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: #fff;
+      padding: 5rem 1.5rem;
+      text-align: center;
+    }
+
+    .hero-content {
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      font-family: var(--font-serif);
+      font-size: 2.75rem;
+      margin-bottom: 1.25rem;
+      line-height: 1.2;
+      color: #f8fafc;
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      color: #94a3b8;
+      margin-bottom: 2rem;
+      font-weight: 300;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: var(--accent);
+      color: #fff;
+      padding: 0.85rem 1.75rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn:hover {
+      background-color: var(--accent-hover);
+    }
+
+    /* Content Sections */
+    section {
+      padding: 4.5rem 1.5rem;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      color: var(--bg-dark);
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    /* Core Mission */
+    .mission-text p {
+      margin-bottom: 1.25rem;
+      font-size: 1.05rem;
+      color: var(--text-dark);
+    }
+
+    /* Portfolio Section */
+    .ventures {
+      background-color: #f1f5f9;
+    }
+
+    .ventures-intro {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 3rem auto;
+      color: var(--text-muted);
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      padding: 2rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    }
+
+    .card h3 {
+      font-family: var(--font-serif);
+      color: var(--navy);
+      font-size: 1.35rem;
+      margin-bottom: 1rem;
+    }
+
+    .card p {
+      color: var(--text-muted);
+      font-size: 0.98rem;
+    }
+
+    /* Governance & Promise */
+    .governance p, .promise p {
+      margin-bottom: 1.25rem;
+      font-size: 1.05rem;
+    }
+
+    .promise-box {
+      background-color: #eff6ff;
+      border-left: 4px solid var(--navy);
+      padding: 2.5rem;
+      border-radius: 0 8px 8px 0;
+      margin-top: 2rem;
+    }
+
+    /* Footer / Contact */
+    footer {
+      background-color: var(--bg-dark);
+      color: #94a3b8;
+      padding: 3.5rem 1.5rem 2rem 1.5rem;
+    }
+
+    .footer-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 1.5rem;
+    }
+
+    .footer-brand {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      color: #fff;
+      letter-spacing: 1px;
+    }
+
+    .footer-contact p {
+      margin: 0.3rem 0;
+      font-size: 0.95rem;
+    }
+
+    .footer-contact a {
+      color: #cbd5e1;
+      text-decoration: none;
+    }
+
+    .footer-contact a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-legal {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      width: 100%;
+      padding-top: 1.5rem;
+      font-size: 0.85rem;
+      color: #64748b;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 640px) {
+      .hero h1 { font-size: 2rem; }
+      nav ul { gap: 0.8rem; font-size: 0.85rem; }
+      .nav-container { flex-direction: column; gap: 0.75rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <div class="nav-container">
+      <a href="#home" class="logo">FREEDOM HUBS LLC</a>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#vision">Vision</a></li>
+          <li><a href="#ventures">Ventures</a></li>
+          <li><a href="#governance">Governance</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Header -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Innovating for Generations.<br />Preserving What Matters.</h1>
+      <p>Freedom Hubs LLC is a premier multi-brand development firm dedicated to creating technologies and services that capture, protect, and modernize your legacy—bridging 30-year-old analog media like VHS tape conversions with cutting-edge AI apps.</p>
+      <a href="#ventures" class="btn">Learn About Our Brands</a>
+    </div>
+  </section>
+
+  <!-- Core Mission -->
+  <section id="vision" class="mission">
+    <div class="container">
+      <h2 class="section-title">The Freedom Hubs Vision</h2>
+      <div class="mission-text">
+        <p>At Freedom Hubs LLC, we recognize that in a rapidly shifting world, the most valuable assets are the stories we tell, the connections we build, and the legacies we preserve.</p>
+        <p>Our mission is to build, acquire, and grow a diverse portfolio of specialized brands that serve as essential bridges. Whether through precise digital media translation—converting physical 30-year-old VHS archives—or building modern AI-driven mobile applications, our ventures are unified by a single commitment: leveraging innovative technology to empower individuals and families to secure and access their history for a digital future.</p>
+        <p>We focus on delivering technological solutions that offer security, seamless access, and perpetual relevance.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ventures -->
+  <section id="ventures" class="ventures">
+    <div class="container">
+      <h2 class="section-title">A Portfolio of Focused Solutions</h2>
+      <p class="ventures-intro">We operate on a simple principle: specialize to excel. Instead of offering generalized solutions, Freedom Hubs LLC develops unique, purpose-driven brands under its umbrella. Each DBA is incubated with a specific mandate and operates independently to ensure deep domain expertise and maximum quality.</p>
+      
+      <div class="cards-grid">
+        <div class="card">
+          <h3>Digital Connectivity & AI Mobile Applications</h3>
+          <p>Focused on creating innovative mobile platforms and AI-driven apps that enhance daily life, streamline personal management, and strengthen personal connections.</p>
+        </div>
+        <div class="card">
+          <h3>Legacy Media Preservation & Archiving</h3>
+          <p>Dedicated to converting 30-year-old analog history—including VHS tapes and legacy physical media—into a vibrant, accessible digital future for generations to access.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Corporate Governance -->
+  <section id="governance" class="governance">
+    <div class="container">
+      <h2 class="section-title">Corporate Governance</h2>
+      <p>Freedom Hubs LLC is professionally managed and strategically led to maximize cross-brand synergy and long-term stability. While our brands are distinct in their execution, they operate under a unified framework of shared corporate values: Integrity, Security, and Innovation.</p>
+      <p>This management model allows us to maintain a nimble operational approach within our specialized niches, while the parent LLC provides a robust legal and financial infrastructure, ensuring accountability and consistent standards across our entire portfolio.</p>
+      
+      <div class="promise-box">
+        <h2 class="section-title" style="text-align: left; font-size: 1.6rem; margin-bottom: 0.75rem;">A Foundation for Your Digital Legacy</h2>
+        <p style="margin-bottom: 0;">We understand that you don't just invest in technology—you invest in the certainty that your data and memories will endure. Freedom Hubs LLC is that foundation. We build with the precision of a technician and the heart of a historian, ensuring every project under our name is worthy of your trust.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer & Contact -->
+  <footer id="contact">
+    <div class="footer-container">
+      <div class="footer-brand">FREEDOM HUBS LLC</div>
+      
+      <div class="footer-contact">
+        <p><strong>Phone:</strong> (xxx) xxx - xxxx</p>
+        <p><strong>Email:</strong> <a href="mailto:xxxxxx@freedomhubsllc.com">xxxxxx@freedomhubsllc.com</a></p>
+        <p>The Woodlands, TX, United States</p>
+      </div>
+
+      <div class="footer-legal">
+        <p>&copy; 2026 Freedom Hubs LLC. All Rights Reserved.</p>
+        <p>Doing Business As (DBA) multiple specialized ventures.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
